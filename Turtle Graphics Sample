@@ -1,0 +1,66 @@
+# A Simple program that creates 2D artwork using Python's 
+# Turtle Graphics module.
+
+# Step 1 - Import all modules
+
+import turtle 
+import time
+import random
+import math
+
+# Step 2 - Define the list "colorPalette"
+
+
+colorPalette  = ['red','white','blue','yellow','green','orange'] 
+
+
+'''Step 3 - Create an instance of the "Screen" object from the turtle graphics module, and 
+store it in a variable named "wn". The screen's background color will be generated randomly 
+using the random.choice method'''
+
+wn = turtle.Screen()
+wn.bgcolor(random.choice(colorPalette))
+
+
+# Step 4 - Create an instance of the "Turtle" object, from the turtle graphics module. Store 
+# it in a variable named 'chuck'
+
+chuck = turtle.Turtle()
+
+# Step 5 - Define methods for the "chuck" object
+
+chuck.color(random.choice(colorPalette))
+chuck.shape('turtle')
+chuck.pensize(3)
+
+# Step 6 - Create a 2nd instance of the turtle object, from the turtle graphics module. Store 
+# it in a variable named 'jane'
+
+jane = turtle.Turtle()
+jane.color(random.choice(colorPalette))
+jane.shape('turtle')
+jane.pensize(2)
+
+
+# Step 7 - Create a FOR loop that randomly generates the drawing path of the 'chuck' object
+
+for i in range(8): # 8 steps
+	chuck.forward(random.randrange(200))
+	chuck.left(random.randrange(360))
+	chuck.backward(random.randrange(200))
+
+
+# Step 8 - Create a FOR loop that randomly generates the drawing path of the 'jane' object
+
+for i in range(8):
+	jane.forward(random.randrange(200))
+	jane.color(random.choice(colorPalette))
+	jane.left(random.randrange(360))
+	# jane.color(random.choice(colorPalette))
+	jane.backward(random.randrange(200))
+	# jane.color(random.choice(colorPalette))
+
+
+# Step 9 - Programs ends on user's click.
+
+wn.exitonclick()
