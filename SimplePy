@@ -1,0 +1,80 @@
+# This is a very simple program. All is does is take input from the user, and then 
+# validates their input based on specified criteria.
+
+# Step 1. I will import the time and math modules. The time module 
+# is only used for effect; it can be omitted if need be.
+
+import time 
+import math 
+
+# Step 2. I will name and define my global variables:
+
+firstName = raw_input("What's your first name?")
+lastName = raw_input("...and your last name?")
+age = raw_input('How old are you?')
+weight = raw_input('How much do you weigh?')
+
+myList = [1,2,3,4,5,6,7,8,age,weight]
+
+
+# Step 3. User input is concatenated here, resulting in a printed string as output.
+
+fullName = firstName + ' ' + lastName
+
+greeting = 'Welcome,' + ' ' + fullName + '!'
+
+# Step 4. I'll define a function that validates the user's entry, such that 
+# it will ONLY accept alphabetical characters. This function contains an IF/ELSE clause, and uses the .ISALPHA method:
+
+def check_user_entry(fullName):
+	if fullName.isalpha:
+		print fullName
+	else:
+		print 'Sorry, but your name must contain alphabetical characters. Try again.'
+
+
+print check_user_entry(fullName)
+
+
+time.sleep(1.5) # Slight pause for effect; not critical.
+
+
+# Step 5. I build upon the previous user input. This time, I will add an IF/ELIF/ELSE conditional:
+
+
+def nameLength(fullName):
+	if len(fullName) < 20 and fullName.isalpha:
+		print '...man, that sure was a mouthful!!! It took all of' + ' ' + str(len(greeting)) + ' ' + 'characters just to greet you!!!'
+
+	elif nameLength > 20 and nameLength != 30:
+		print 'Wow. You really have a weird name.'
+
+	else:
+		print 'Meh.Your name is too short.Boo!'
+
+
+print nameLength(fullName)
+
+
+# Step 6. Finally, I will add a function which contains a FOR loop that iterates over the list "myList", and 
+# prints the uppercase of each of its constituents. This list is defined at the beginning of the program.
+
+def digits_in_myList(myList):
+	for x in myList:
+		if x.isalpha:
+			print x.upper
+		else:
+			print none
+
+
+
+
+
+
+
+
+
+
+
+
+
