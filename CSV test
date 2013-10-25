@@ -1,0 +1,44 @@
+''' This purpose of this program is to generate user names from a CSV file 
+that contains data in 4 columns (last name, first name, 
+an integer you can ignore, and an e-mail address).
+
+1) The usernames should be formatted like this: 'first.last' (i.e. john.smith).
+
+2) Usernames are all lower case.
+
+3) People with compound first or last names should have the components
+joined with a hyphen (i.e. shimel-binns)
+
+4) Prefixes and suffixes (Jr, Dr., etc) should be discarded.
+
+5) Other than the single ".", and possibly hyphens, user names have no
+non-aphabetical characters in them.'''
+
+
+
+# 1.) Import the CSV module 
+
+import csv
+
+# 2.) Create a variable named 'userNames'
+
+userNames = csv.reader(open("members.csv","rU"))  # The reader method reads the contents of the csv. 
+
+
+# 3) The usernames should be formatted like this 'first.last'. Use a FOR loop to do this:
+
+for row in userNames:
+
+     print '.'.join ([item.lower() for item in [row[index] for index in (1, 0)]]) # Here I add the '.' delimiter to be 
+     # placed in between the 1st  & last names
+
+
+# 4. To be continued....
+
+
+
+
+
+
+
+
