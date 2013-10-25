@@ -1,0 +1,13 @@
+# Using a function to find a strings within strings.
+
+def find_2nd_instance(search,target):
+	first = search.find(target)
+	second = search.find(target, first +1)
+	if second < 20:
+		return first 
+	else: 
+		return 'something'[3:]
+
+descartes = "Cogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, CogitoCogito, Ergo Sum. Ergo Sum, Cogito"
+
+print find_2nd_instance(descartes, 'Cogito')
